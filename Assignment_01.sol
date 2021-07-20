@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity 0.8.0;
 
 //Step-1
@@ -40,23 +41,36 @@ contract MotorCycle is ParentVehicle{
     }
 }
 
-//Step-3 & 4
+//Step-3
 contract AltoMehran is Cars {
-function serviceStation1(address add) public returns (string memory) {
+
+}
+
+contract Hino is Truck {
+    
+}
+
+contract Yamaha is MotorCycle {
+    
+}
+
+//Step-4 calling a function/method of a deployed contract
+contract serviceStation1 {
+function doService(address add) public returns (string memory) {
     AltoMehran a = AltoMehran(add);
     return a.service();
     }
 }
 
-contract Hino is Truck {
-    function serviceStation2(address add) public returns (string memory) {
+contract serviceStation2 {
+    function doService(address add) public returns (string memory) {
     Hino h = Hino(add);
     return h.service();
     }
 }
 
-contract Yamaha is MotorCycle {
-    function serviceStation3(address add) public returns (string memory) {
+contract serviceStation3 {
+    function doService(address add) public returns (string memory) {
     Yamaha y = Yamaha(add);
     return y.service();
     }
