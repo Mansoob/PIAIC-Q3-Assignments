@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.8.0;
@@ -476,3 +477,6 @@ contract ERC20 is Context, IERC20, IERC20Metadata {
     function _beforeTokenTransfer(address from, address to, uint256 amount) internal virtual { }
 
 }
+=======
+
+>>>>>>> fb454ce31ff5e8cc749ef3c016f6d035174db91c
