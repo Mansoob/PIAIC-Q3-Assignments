@@ -457,7 +457,7 @@ contract PT5 is Context, IERC20, IERC20Metadata {
       }
       
       function buyToken() payable public returns(uint, string memory){
-          require(msg.value >= 0, "You have not specified any amount for investment.");
+          require(msg.value > 0, "You have not specified any amount for investment.");
           uint Investment = msg.value;
           uint tokenQty = Investment / tokenPrice;
           _balances[tokenOwner] -= tokenQty * 1e18;
